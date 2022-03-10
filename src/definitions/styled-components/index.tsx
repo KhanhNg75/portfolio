@@ -38,10 +38,11 @@ export const StyledThemeProvider: React.FC = ({ children }) => {
     );
 
     return (
-        <ThemeContext.Provider value={values}>
-            <ThemeProvider theme={theme === "light" ? light : dark}>
-                {children}
-            </ThemeProvider>
-        </ThemeContext.Provider>
+        // <ThemeContext.Provider value={values}>
+        //     <ThemeProvider theme={theme === "light" ? light : dark}>
+        //         {children}
+        //     </ThemeProvider>
+        // </ThemeContext.Provider>
+        <></>
     );
 };

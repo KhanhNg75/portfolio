@@ -1,0 +1,10 @@
+export * as Header from "./components/Header";
+export * as MainFrame from "./components/MainFrame";
+export * as Main from "./components/Main";
+export * as About from "./components/About";
+export * as Portfolio from "./components/Portfolio";
+export * as Resume from "./components/Resume";
+export * as TypedText from "./components/TypedText";
+export * as Timeline from "./components/Timeline";
+export * as ProgrammingSkills from "./components/Programming";
+// export * as Typography from "./components/Typography";

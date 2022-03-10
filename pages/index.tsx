@@ -1,17 +1,55 @@
-import React from "react";
+import { TypedText } from "@components/typedText";
+import { Main as M } from "@styles";
 
-import { Wrapper, Header, Main, Footer, Cards } from "@components";
-import GlobalStyle from "@styles/globalStyles";
+import FacebookIcon from "@material-ui/icons/Facebook";
+import InstagramIcon from "@material-ui/icons/Instagram";
+import GitHubIcon from "@material-ui/icons/GitHub";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+
+const socialMediaLinks = {
+    facebook: "https://www.facebook.com/bao.khanh.52493/",
+    instagram: "https://www.instagram.com/khanhng75/",
+    github: "https://github.com/KhanhNg75",
+    linkedin: "https://www.linkedin.com/in/khanh-nguyen-441123198/",
+};
 
 const Home: React.FC = () => {
     return (
-        <Wrapper>
-            <GlobalStyle />
-            <Header />
-            <Main />
-            <Cards />
-            <Footer />
-        </Wrapper>
+        <M.Style>
+            <M.Container>
+                <M.Avatar>
+                    <M.Image />
+                </M.Avatar>
+                <M.Details>
+                    <M.Name>Hi, I am Khanh</M.Name>
+                    <TypedText
+                        strings={[
+                            "Junior Front-end Developer.",
+                            "Based in Saigon.",
+                            "Accidentally fell in love with JavaScript.",
+                        ]}
+                        loop
+                        showCursor
+                        typeSpeed={30}
+                        backSpeed={30}
+                    />
+                    <M.SocialMedia>
+                        <M.IconMedia href={socialMediaLinks.facebook}>
+                            <FacebookIcon />
+                        </M.IconMedia>
+                        <M.IconMedia href={socialMediaLinks.instagram}>
+                            <InstagramIcon />
+                        </M.IconMedia>
+                        <M.IconMedia href={socialMediaLinks.github}>
+                            <GitHubIcon />
+                        </M.IconMedia>
+                        <M.IconMedia href={socialMediaLinks.linkedin}>
+                            <LinkedInIcon />
+                        </M.IconMedia>
+                    </M.SocialMedia>
+                </M.Details>
+            </M.Container>
+        </M.Style>
     );
 };
 export default Home;

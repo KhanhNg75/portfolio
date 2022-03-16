@@ -7,6 +7,7 @@ import {
     education,
     program,
     softwares,
+    knowledge,
 } from "src/common/data";
 import { Resume as R } from "@styles";
 import { Knowledge } from "@components/knowledge";
@@ -19,7 +20,7 @@ const Resume: React.FC = () => {
             <Timeline title="My Education" timelineItems={education} />
             <ProgrammingSkills title="Programming SKills" skills={program} />
             <ProgrammingSkills title="Softwares" skills={softwares} />
-            <Knowledge title="Knowledge" />
+            <Knowledge title="Knowledge" knowledge={knowledge} />
         </R.Style>
     );
 };

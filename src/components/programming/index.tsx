@@ -12,7 +12,9 @@ export const ProgrammingSkills: React.FC<Props> = ({ title, skills }) => {
         <P.Style>
             <Title>{title}</Title>
             {skills.map((item) => (
-                <P.Style>{item.id}</P.Style>
+                <P.Style>
+                    {item.id} - {item.title}
+                </P.Style>
             ))}
         </P.Style>
     );

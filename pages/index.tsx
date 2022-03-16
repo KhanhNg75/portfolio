@@ -25,7 +25,7 @@ const Home: React.FC = () => {
                     <TypedText
                         strings={[
                             "Junior Front-end Developer.",
-                            "Based in Saigon.",
+                            "Based in Bristol.",
                             "Accidentally fell in love with JavaScript.",
                         ]}
                         loop

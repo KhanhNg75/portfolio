@@ -1,6 +1,7 @@
 import { IExperience } from "@interfaces/ITimeline";
 import { IProgrammingSkill } from "@interfaces/IProgrammingSkill";
 import { IAboutMe } from "@interfaces/IAboutMe";
+import { IKnowledge } from "@interfaces/IKnowledge";
 
 export const aboutMe: IAboutMe = {
     intro: "Hi, I'm Khanh a website developer from Vietnam, I have a passion for creating a fully functional website. Moreover, I am very interested in learning new knowledge in this field for applying in Wed Developer like ReactJS and TypeScript.",
@@ -79,62 +80,44 @@ export const program: IProgrammingSkill[] = [
     },
     {
         id: 3,
-        title: "Vue",
-        key: "vue",
-        percent: 85,
-    },
-    {
-        id: 4,
-        title: "Nuxt",
-        key: "nuxtjs",
-        percent: 85,
-    },
-    {
-        id: 5,
         title: "React",
         key: "react",
         percent: 65,
     },
     {
-        id: 6,
+        id: 4,
         title: "Next",
         key: "nextjs",
         percent: 65,
     },
     {
-        id: 7,
+        id: 5,
         title: "HTML",
         key: "html",
         percent: 80,
     },
     {
-        id: 8,
+        id: 6,
         title: "CSS",
         key: "css",
         percent: 80,
     },
     {
-        id: 9,
+        id: 7,
         title: "SCSS",
         key: "sass",
         percent: 80,
     },
     {
-        id: 10,
+        id: 8,
         title: "Nodejs",
         key: "node",
         percent: 40,
     },
     {
-        id: 11,
+        id: 9,
         title: "Wordpress",
         key: "wordpress",
-        percent: 55,
-    },
-    {
-        id: 12,
-        title: "Shopify",
-        key: "shopify",
         percent: 55,
     },
 ];
@@ -160,32 +143,51 @@ export const softwares: IProgrammingSkill[] = [
     },
     {
         id: 4,
-        title: "Insomnia",
-        key: "insomnia",
-        percent: 85,
-    },
-    {
-        id: 5,
         title: "Photoshop",
         key: "photoshop",
         percent: 65,
     },
     {
-        id: 6,
+        id: 5,
         title: "Illustrator",
         key: "illustrator",
         percent: 65,
     },
     {
-        id: 7,
+        id: 6,
         title: "XD",
         key: "xd",
         percent: 65,
     },
+];
+
+export const knowledge: IKnowledge[] = [
     {
-        id: 8,
-        title: "Figma",
-        key: "figma",
-        percent: 80,
+        id: 1,
+        title: "Teamwork",
+    },
+    {
+        id: 2,
+        title: "Bootstrap",
+    },
+    {
+        id: 3,
+        title: "GIT Source Control",
+    },
+    {
+        id: 4,
+        title: "Rest API Development",
+    },
+    {
+        id: 5,
+        title: "Performance Optimization",
+    },
+    {
+        id: 6,
+        title: "Knowledge of SEO Principles",
+    },
+    {
+        id: 7,
+        title: "Problem-solving",
     },
 ];

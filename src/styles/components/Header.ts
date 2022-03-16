@@ -89,6 +89,9 @@ const MenuContent = styled.ul<IMenuItem>`
 const MenuItem = styled.li`
     & a {
         color: var(--txt-color);
+        transition: all 0.3s ease;
+    }
+    & a:hover {
         letter-spacing: 0.25rem;
     }
     &.active {

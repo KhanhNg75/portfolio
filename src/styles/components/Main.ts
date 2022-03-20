@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import profilePhoto from "@assets/images/profile.jpg";
+// import profilePhoto from "@assets/images/profile.jpg";
 
 const Style = styled.div`
     min-height: 100vh;

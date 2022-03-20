@@ -6,9 +6,18 @@ const Image = styled.div`
     height: 230px;
     position: relative;
     margin-bottom: 3rem;
+    @media only screen and (min-width: 1200px) {
+        height: 444px;
+    }
 `;
 
-const Desc = styled.div``;
+const Desc = styled.div`
+    display: flex;
+    flex-direction: column;
+    @media only screen and (min-width: 1200px) {
+        flex-direction: row;
+    }
+`;
 
 // const Title = styled.h3`
 //     font-size: 1.125rem;
@@ -30,9 +39,18 @@ const Desc = styled.div``;
 const Intro = styled.p`
     margin-bottom: 2.188rem;
     font-style: italic;
+    @media only screen and (min-width: 1200px) {
+        width: 55%;
+        padding-right: 50px;
+    }
 `;
 
-const Infor = styled.div``;
+const Infor = styled.div`
+    @media only screen and (min-width: 1200px) {
+        width: 45%;
+        padding-left: 50px;
+    }
+`;
 
 const InforItem = styled.div`
     display: flex;

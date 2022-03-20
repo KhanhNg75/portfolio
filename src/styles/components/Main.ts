@@ -1,5 +1,5 @@
 import styled from "styled-components";
-// import profilePhoto from "@assets/images/profile.jpeg";
+// import profilePhoto from "@assets/images/profile.jpg";
 
 const Style = styled.div`
     min-height: 100vh;
@@ -24,6 +24,10 @@ const Avatar = styled.div`
     margin-bottom: 1.875rem;
     min-width: 12.5rem;
     min-height: 12.5rem;
+    @media only screen and (min-width: 1024px) {
+        min-width: 15.625rem;
+        min-height: 15.625rem;
+    }
 `;
 
 const Image = styled.div`
@@ -33,12 +37,12 @@ const Image = styled.div`
     left: 0;
     right: 0;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top center;
     background-size: cover;
     animation: morph 8s ease-in-out infinite 1s;
     background-blend-mode: multiply;
-    box-shadow: inset 0 0 0 9px rgb(255 255 255 / 30%);
-    background-image: url("/static/images/profile.jpeg");
+    box-shadow: inset 0px 0px 0px 9px rgb(255 255 255 / 30%);
+    background-image: url("/static/images/profile.jpg");
 `;
 
 const Details = styled.div`

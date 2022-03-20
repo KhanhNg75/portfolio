@@ -32,6 +32,7 @@ const SectionContainer = styled.div`
     max-width: 968px;
     width: 100%;
     padding: 0 1.25rem;
+    margin: 0 auto;
 `;
 
 export { Container, Content, Section, SectionContainer };

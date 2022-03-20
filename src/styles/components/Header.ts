@@ -97,6 +97,7 @@ const MenuItem = styled.li`
     &.active {
         & a {
             color: var(--txt-black);
+            letter-spacing: 0.25rem;
         }
     }
 `;

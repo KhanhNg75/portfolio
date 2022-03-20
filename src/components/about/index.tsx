@@ -2,7 +2,7 @@ import { About as A } from "@styles";
 import { Title } from "@styles/components/Typography";
 import Image from "next/image";
 import { IAboutMe } from "@interfaces/IAboutMe";
-import profilePhoto from "@assets/images/profile.jpeg";
+import profilePhoto from "@assets/images/profile.jpg";
 
 interface Props {
     title: string;
@@ -20,8 +20,8 @@ export const About: React.FC<Props> = ({ title, info }) => {
                     objectFit="cover"
                 />
             </A.Image>
+            <Title>{title}</Title>
             <A.Desc>
-                <Title>{title}</Title>
                 <A.Intro>{info.intro}</A.Intro>
                 <A.Infor>
                     <A.InforItem>

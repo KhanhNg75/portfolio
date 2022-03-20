@@ -9,6 +9,9 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
     return (
         <StyledThemeProvider>
             <GlobalStyle />
+            <div className="preloader">
+                <div className="loader_line"></div>
+            </div>
             <Layout>
                 <Component {...pageProps} />
             </Layout>

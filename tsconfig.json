@@ -60,8 +60,7 @@
       ],
       "@assets/*": ["src/assets/*"],
       "@assets": ["src/assets"]
-    },
-    "incremental": true
+    }
   },
   "include": ["next-env.d.ts", "declaration.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": [

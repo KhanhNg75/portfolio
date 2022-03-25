@@ -2,53 +2,42 @@ import styled from "styled-components";
 
 const Style = styled.div``;
 
-const Image = styled.div`
-    height: 230px;
-    position: relative;
-    margin-bottom: 3rem;
+const Content = styled.div`
     @media only screen and (min-width: 1200px) {
+        display: flex;
+    }
+`;
+
+const Image = styled.div``;
+
+const ProfileImage = styled.img`
+    height: 230px;
+    padding-bottom: 20px;
+    object-fit: cover;
+    @media only screen and (min-width: 1200px) {
+        width: 400px;
         height: 444px;
     }
 `;
 
-const Desc = styled.div`
-    display: flex;
-    flex-direction: column;
+const Description = styled.div`
     @media only screen and (min-width: 1200px) {
-        flex-direction: row;
+        padding-left: 50px;
     }
 `;
 
-// const Title = styled.h3`
-//     font-size: 1.125rem;
-//     font-weight: 700;
-//     margin: 3rem 0 1.625rem;
-//     text-transform: uppercase;
-//     color: var(--txt-black);
-//     position: relative;
-//     &::before {
-//         position: absolute;
-//         left: 0;
-//         top: 0px;
-//         width: 1px;
-//         height: 100%;
-//         background-color: #f5df4e;
-//     }
-// `;
-
 const Intro = styled.p`
-    margin-bottom: 2.188rem;
     font-style: italic;
+    padding-bottom: 20px;
     @media only screen and (min-width: 1200px) {
-        width: 55%;
-        padding-right: 50px;
+        padding-bottom: 30px;
     }
 `;
 
 const Infor = styled.div`
+    padding-bottom: 20px;
     @media only screen and (min-width: 1200px) {
-        width: 45%;
-        padding-left: 50px;
+        padding-bottom: 30px;
     }
 `;
 
@@ -68,9 +57,10 @@ const InforRight = styled.p``;
 
 export {
     Style,
+    Content,
     Image,
-    Desc,
-    // Title,
+    ProfileImage,
+    Description,
     Intro,
     Infor,
     InforItem,

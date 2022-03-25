@@ -15,12 +15,32 @@ import { Knowledge } from "@components/knowledge";
 const Resume: React.FC = () => {
     return (
         <R.Style>
-            <About title="About Me" info={aboutMe} />
-            <Timeline title="My Experience" timelineItems={experience} />
-            <Timeline title="My Education" timelineItems={education} />
-            <ProgrammingSkills title="Programming SKills" skills={program} />
-            <ProgrammingSkills title="Softwares" skills={softwares} />
-            <Knowledge title="Knowledge" knowledge={knowledge} />
+            <About title="About Me" subtitle="About Me" info={aboutMe} />
+            <Timeline
+                title="My Experience"
+                subtitle="My Experience"
+                timelineItems={experience}
+            />
+            <Timeline
+                title="My Education"
+                subtitle="My Education"
+                timelineItems={education}
+            />
+            <ProgrammingSkills
+                title="Programming SKills"
+                subtitle="Programming SKills"
+                skills={program}
+            />
+            <ProgrammingSkills
+                title="Softwares"
+                subtitle="Softwares"
+                skills={softwares}
+            />
+            <Knowledge
+                title="Knowledge"
+                subtitle="Knowledge"
+                knowledge={knowledge}
+            />
         </R.Style>
     );
 };

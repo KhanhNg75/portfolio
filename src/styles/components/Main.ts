@@ -1,5 +1,5 @@
 import styled from "styled-components";
-// import profilePhoto from "@assets/images/profile.jpg";
+import profilePhoto from "@assets/images/profile.jpg";
 
 const Style = styled.div`
     min-height: 100vh;
@@ -42,7 +42,7 @@ const Image = styled.div`
     animation: morph 8s ease-in-out infinite 1s;
     background-blend-mode: multiply;
     box-shadow: inset 0px 0px 0px 9px rgb(255 255 255 / 30%);
-    background-image: url("/static/images/profile.jpg");
+    background-image: url(${profilePhoto});
 `;
 
 const Details = styled.div`

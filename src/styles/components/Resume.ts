@@ -1,7 +1,10 @@
 import styled from "styled-components";
 
 const Style = styled.div`
-    padding: 10.625rem 0 6.25rem;
+    padding: 6rem 0 6rem;
+    @media only screen and (min-width: 1200px) {
+        padding: 3rem 0 6rem;
+    }
 `;
 
 export { Style };

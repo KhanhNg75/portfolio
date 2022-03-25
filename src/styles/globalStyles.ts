@@ -10,12 +10,16 @@ const GlobalStyle = createGlobalStyle`
   }
 
   :root{
+    --bg-newp-primary: #f2f3f7;
     --bg-primary: #f8f8f8;
     --bg-white: #fff;
     --bd-gray: #ebebeb;
     --txt-color: #767676;
     --txt-black: #000;
     --txt-gray: #999;
+    --txt-white: #fff;
+    --bg-light-color-2: rgba(3,127,255,.3);
+    --border-color: #2e344e;
   }
   
   body {

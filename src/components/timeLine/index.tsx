@@ -1,29 +1,33 @@
 import { IExperience } from "@interfaces/ITimeline";
-import { Title } from "@styles/components/Typography";
+import { Title } from "@components/title";
 import { Timeline as T } from "@styles";
 
 interface Props {
     title: string;
+    subtitle: string;
     timelineItems: IExperience[];
 }
 
-export const Timeline: React.FC<Props> = ({ title, timelineItems }) => {
+export const Timeline: React.FC<Props> = ({
+    title,
+    subtitle,
+    timelineItems,
+}) => {
     return (
-        <>
-            <div>
-                <Title>{title}</Title>
-                {timelineItems.map((item) => (
-                    <T.SectionBlock key={item.id}>
+        <T.Style>
+            <Title title={title} subtitle={subtitle} />
+            {timelineItems.map((item) => (
+                <T.SectionBlock key={item.id}>
+                    <T.BlockLeft>
+                        <T.Period>{item.period}</T.Period>
+                    </T.BlockLeft>
+                    <T.BlockRight>
                         <T.Position>{item.position}</T.Position>
-                        <T.Title>
-                            {item.company}
-                            {item.company ? " / " : ""}
-                            {item.period}
-                        </T.Title>
+                        <T.Title>{item.company}</T.Title>
                         <T.Description>{item.description}</T.Description>
-                    </T.SectionBlock>
-                ))}
-            </div>
-        </>
+                    </T.BlockRight>
+                </T.SectionBlock>
+            ))}
+        </T.Style>
     );
 };

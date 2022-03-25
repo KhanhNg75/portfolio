@@ -3,7 +3,8 @@ import styled from "styled-components";
 const Container = styled.div`
     width: 100%;
     min-height: 100vh;
-    background-color: var(--bg-primary);
+    /* background-color: var(--bg-primary); */
+    background-color: var(--bg-newp-primary);
     border-left: none;
     @media only screen and (min-width: 1200px) {
         padding-left: 350px;

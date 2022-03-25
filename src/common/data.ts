@@ -2,6 +2,52 @@ import { IExperience } from "@interfaces/ITimeline";
 import { IProgrammingSkill } from "@interfaces/IProgrammingSkill";
 import { IAboutMe } from "@interfaces/IAboutMe";
 import { IKnowledge } from "@interfaces/IKnowledge";
+import { IProject, IProjectCategory } from "@interfaces/IProject";
+
+import traderByFxLogo from "@assets/images/traderbyfx/traderbyfx-logo.png";
+import traderByFx1 from "@assets/images/traderbyfx/traderbyfx-1.png";
+import traderByFx3 from "@assets/images/traderbyfx/traderbyfx-3.png";
+import traderByFx4 from "@assets/images/traderbyfx/traderbyfx-4.png";
+import traderByFx7 from "@assets/images/traderbyfx/traderbyfx-7.png";
+import traderByFx9 from "@assets/images/traderbyfx/traderbyfx-9.png";
+import traderByFx10 from "@assets/images/traderbyfx/traderbyfx-10.png";
+import traderByFx11 from "@assets/images/traderbyfx/traderbyfx-11.png";
+import traderByFx12 from "@assets/images/traderbyfx/traderbyfx-12.png";
+import traderByFx13 from "@assets/images/traderbyfx/traderbyfx-13.png";
+
+import iconReact from "@assets/images/icon/icon-react.svg";
+import iconNext from "@assets/images/icon/icon-next.svg";
+import iconHtml from "@assets/images/icon/icon-html.svg";
+import iconCss from "@assets/images/icon/icon-css.svg";
+import iconSass from "@assets/images/icon/icon-sass.svg";
+import iconNode from "@assets/images/icon/icon-node.svg";
+import iconWordpress from "@assets/images/icon/icon-wordpress.svg";
+import iconVscode from "@assets/images/icon/icon-vscode.svg";
+import iconPostman from "@assets/images/icon/icon-postman.svg";
+import iconPts from "@assets/images/icon/icon-pts.svg";
+import iconIllustrator from "@assets/images/icon/icon-illustrator.svg";
+import iconXd from "@assets/images/icon/icon-xd.svg";
+import iconSourceTree from "@assets/images/icon/icon-sourcetree.svg";
+import iconJs from "@assets/images/icon/icon-js.svg";
+import iconTs from "@assets/images/icon/icon-ts.svg";
+
+export const ICON_MAP: { [x: string]: string } = {
+    react: iconReact,
+    nextjs: iconNext,
+    html: iconHtml,
+    css: iconCss,
+    sass: iconSass,
+    node: iconNode,
+    wordpress: iconWordpress,
+    vscode: iconVscode,
+    postman: iconPostman,
+    photoshop: iconPts,
+    illustrator: iconIllustrator,
+    xd: iconXd,
+    sourceTree: iconSourceTree,
+    javascript: iconJs,
+    typescript: iconTs,
+};
 
 export const aboutMe: IAboutMe = {
     intro: "Hi, I'm Khanh a website developer from Vietnam, I have a passion for creating a fully functional website. Moreover, I am very interested in learning new knowledge in this field for applying in Wed Developer like ReactJS and TypeScript.",
@@ -189,5 +235,67 @@ export const knowledge: IKnowledge[] = [
     {
         id: 7,
         title: "Problem-solving",
+    },
+];
+
+export const projectCategories: IProjectCategory[] = [
+    {
+        id: 1,
+        slug: "web-app",
+        title: "Web App",
+    },
+    {
+        id: 2,
+        slug: "shopify",
+        title: "Shopify",
+    },
+];
+
+export const projects: IProject[] = [
+    {
+        id: 1,
+        title: "Trader",
+        techstack: "Micro-frontend, Reactjs, styled-component",
+        image: traderByFxLogo,
+        category: {
+            id: 1,
+            slug: "web-app",
+            title: "Web App",
+        },
+        projects: [
+            traderByFx1,
+            traderByFx3,
+            traderByFx4,
+            traderByFx7,
+            traderByFx9,
+            traderByFx10,
+            traderByFx11,
+            traderByFx12,
+            traderByFx13,
+        ],
+    },
+    {
+        id: 2,
+        title: "Wegonative",
+        techstack: "Vuesion, Vuejs, Bootstrap",
+        image: "nativeLogo",
+        category: {
+            id: 2,
+            slug: "shopify",
+            title: "Shopify",
+        },
+        projects: [],
+    },
+    {
+        id: 3,
+        title: "Wegonative Portal",
+        techstack: "Vuejs, Ant Design",
+        image: "portfolio3",
+        category: {
+            id: 1,
+            slug: "web-app",
+            title: "Web App",
+        },
+        projects: [],
     },
 ];

@@ -1,14 +1,15 @@
 import { IKnowledge } from "@interfaces/IKnowledge";
-import { Title } from "@styles/components/Typography";
+import { Title } from "@components/title";
 
 interface Props {
     title: string;
+    subtitle: string;
     knowledge: IKnowledge[];
 }
-export const Knowledge: React.FC<Props> = ({ title, knowledge }) => {
+export const Knowledge: React.FC<Props> = ({ title, subtitle, knowledge }) => {
     return (
         <>
-            <Title>{title}</Title>
+            <Title title={title} subtitle={subtitle} />
             {knowledge.map((point) => (
                 <li key={point.id}>{point.title}</li>
             ))}

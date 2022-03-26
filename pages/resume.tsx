@@ -7,10 +7,10 @@ import {
     education,
     program,
     softwares,
-    knowledge,
+    professional,
 } from "src/common/data";
 import { Resume as R } from "@styles";
-import { Knowledge } from "@components/knowledge";
+import { Professional } from "@components/professional";
 
 const Resume: React.FC = () => {
     return (
@@ -36,10 +36,10 @@ const Resume: React.FC = () => {
                 subtitle="Softwares"
                 skills={softwares}
             />
-            <Knowledge
-                title="Knowledge"
-                subtitle="Knowledge"
-                knowledge={knowledge}
+            <Professional
+                title="Professional Skills"
+                subtitle="Professional Skills"
+                professional={professional}
             />
         </R.Style>
     );

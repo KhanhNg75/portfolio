@@ -1,7 +1,7 @@
 import { IExperience } from "@interfaces/ITimeline";
 import { IProgrammingSkill } from "@interfaces/IProgrammingSkill";
 import { IAboutMe } from "@interfaces/IAboutMe";
-import { IKnowledge } from "@interfaces/IKnowledge";
+import { IProfessional } from "@interfaces/IProfessional";
 import { IProject, IProjectCategory } from "@interfaces/IProject";
 
 import traderByFxLogo from "@assets/images/traderbyfx/traderbyfx-logo.png";
@@ -15,38 +15,68 @@ import traderByFx11 from "@assets/images/traderbyfx/traderbyfx-11.png";
 import traderByFx12 from "@assets/images/traderbyfx/traderbyfx-12.png";
 import traderByFx13 from "@assets/images/traderbyfx/traderbyfx-13.png";
 
-import iconReact from "@assets/images/icon/icon-react.svg";
-import iconNext from "@assets/images/icon/icon-next.svg";
-import iconHtml from "@assets/images/icon/icon-html.svg";
-import iconCss from "@assets/images/icon/icon-css.svg";
-import iconSass from "@assets/images/icon/icon-sass.svg";
-import iconNode from "@assets/images/icon/icon-node.svg";
-import iconWordpress from "@assets/images/icon/icon-wordpress.svg";
-import iconVscode from "@assets/images/icon/icon-vscode.svg";
-import iconPostman from "@assets/images/icon/icon-postman.svg";
-import iconPts from "@assets/images/icon/icon-pts.svg";
-import iconIllustrator from "@assets/images/icon/icon-illustrator.svg";
-import iconXd from "@assets/images/icon/icon-xd.svg";
-import iconSourceTree from "@assets/images/icon/icon-sourcetree.svg";
-import iconJs from "@assets/images/icon/icon-js.svg";
-import iconTs from "@assets/images/icon/icon-ts.svg";
+import iconReact from "@assets/images/icon/icon-react.jpg";
+import iconreactHover from "@assets/images/icon/icon-react.svg";
+import iconNext from "@assets/images/icon/icon-next.jpg";
+import iconNextHover from "@assets/images/icon/icon-next.jpg";
+import iconHtml from "@assets/images/icon/icon-html.jpg";
+import iconHtmlHover from "@assets/images/icon/icon-html.svg";
+import iconCss from "@assets/images/icon/icon-css.jpg";
+import iconCssHover from "@assets/images/icon/icon-css.svg";
+import iconSass from "@assets/images/icon/icon-sass.jpg";
+import iconSassHover from "@assets/images/icon/icon-sass.svg";
+import iconNode from "@assets/images/icon/icon-node.jpg";
+import iconNodeHover from "@assets/images/icon/icon-node.svg";
+import iconWordpress from "@assets/images/icon/icon-wordpress.jpg";
+import iconWordpressHover from "@assets/images/icon/icon-wordpress.svg";
+import iconVscode from "@assets/images/icon/icon-vscode.jpg";
+import iconVscodeHover from "@assets/images/icon/icon-vscode.svg";
+import iconPostman from "@assets/images/icon/icon-postman.jpg";
+import iconPostmanHover from "@assets/images/icon/icon-postman.svg";
+import iconPts from "@assets/images/icon/icon-pts.jpg";
+import iconPtsHover from "@assets/images/icon/icon-pts.svg";
+import iconIllustrator from "@assets/images/icon/icon-illustrator.jpg";
+import iconIllustratorHover from "@assets/images/icon/icon-illustrator.svg";
+import iconXd from "@assets/images/icon/icon-xd.jpg";
+import iconXdHover from "@assets/images/icon/icon-xd.svg";
+import iconSourceTree from "@assets/images/icon/icon-sourcetree.jpg";
+import iconSourceTreeHover from "@assets/images/icon/icon-sourcetree.svg";
+import iconJs from "@assets/images/icon/icon-js.jpg";
+import iconJsHover from "@assets/images/icon/icon-js.svg";
+import iconTs from "@assets/images/icon/icon-ts.jpg";
+import iconTsHover from "@assets/images/icon/icon-ts.svg";
 
 export const ICON_MAP: { [x: string]: string } = {
     react: iconReact,
+    reacthover: iconreactHover,
     nextjs: iconNext,
+    nextjshover: iconNextHover,
     html: iconHtml,
+    htmlhover: iconHtmlHover,
     css: iconCss,
+    csshover: iconCssHover,
     sass: iconSass,
+    sasshover: iconSassHover,
     node: iconNode,
+    nodehover: iconNodeHover,
     wordpress: iconWordpress,
+    wordpresshover: iconWordpressHover,
     vscode: iconVscode,
+    vscodehover: iconVscodeHover,
     postman: iconPostman,
+    postmanhover: iconPostmanHover,
     photoshop: iconPts,
+    photoshophover: iconPtsHover,
     illustrator: iconIllustrator,
+    illustratorhover: iconIllustratorHover,
     xd: iconXd,
+    xdhover: iconXdHover,
     sourceTree: iconSourceTree,
+    sourceTreehover: iconSourceTreeHover,
     javascript: iconJs,
+    javascripthover: iconJsHover,
     typescript: iconTs,
+    typescripthover: iconTsHover,
 };
 
 export const aboutMe: IAboutMe = {
@@ -116,55 +146,55 @@ export const program: IProgrammingSkill[] = [
         id: 1,
         title: "JavaScript",
         key: "javascript",
-        percent: 55,
+        hover: "javascripthover",
     },
     {
         id: 2,
         title: "TypeScript",
         key: "typescript",
-        percent: 55,
+        hover: "typescripthover",
     },
     {
         id: 3,
         title: "React",
         key: "react",
-        percent: 65,
+        hover: "reacthover",
     },
     {
         id: 4,
         title: "Next",
         key: "nextjs",
-        percent: 65,
+        hover: "nextjshover",
     },
     {
         id: 5,
         title: "HTML",
         key: "html",
-        percent: 80,
+        hover: "htmlhover",
     },
     {
         id: 6,
         title: "CSS",
         key: "css",
-        percent: 80,
+        hover: "csshover",
     },
     {
         id: 7,
         title: "SCSS",
         key: "sass",
-        percent: 80,
+        hover: "sasshover",
     },
     {
         id: 8,
         title: "Nodejs",
         key: "node",
-        percent: 40,
+        hover: "nodehover",
     },
     {
         id: 9,
         title: "Wordpress",
         key: "wordpress",
-        percent: 55,
+        hover: "wordpresshover",
     },
 ];
 
@@ -173,41 +203,41 @@ export const softwares: IProgrammingSkill[] = [
         id: 1,
         title: "Vscode",
         key: "vscode",
-        percent: 85,
+        hover: "vscodehover",
     },
     {
         id: 2,
         title: "SourceTree",
         key: "sourceTree",
-        percent: 85,
+        hover: "sourceTreehover",
     },
     {
         id: 3,
         title: "Postman",
         key: "postman",
-        percent: 85,
+        hover: "postmanhover",
     },
     {
         id: 4,
         title: "Photoshop",
         key: "photoshop",
-        percent: 65,
+        hover: "photoshophover",
     },
     {
         id: 5,
         title: "Illustrator",
         key: "illustrator",
-        percent: 65,
+        hover: "illustratorhover",
     },
     {
         id: 6,
         title: "XD",
         key: "xd",
-        percent: 65,
+        hover: "xdhover",
     },
 ];
 
-export const knowledge: IKnowledge[] = [
+export const professional: IProfessional[] = [
     {
         id: 1,
         title: "Teamwork",
@@ -220,10 +250,10 @@ export const knowledge: IKnowledge[] = [
         id: 3,
         title: "GIT Source Control",
     },
-    {
-        id: 4,
-        title: "Rest API Development",
-    },
+    // {
+    //     id: 4,
+    //     title: "Rest API Development",
+    // },
     {
         id: 5,
         title: "Performance Optimization",

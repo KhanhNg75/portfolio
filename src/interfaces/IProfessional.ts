@@ -1,4 +1,4 @@
-export interface IKnowledge {
+export interface IProfessional {
     id: number;
     title: string;
 }

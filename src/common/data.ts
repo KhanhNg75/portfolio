@@ -15,6 +15,23 @@ import traderByFx11 from "@assets/images/traderbyfx/traderbyfx-11.png";
 import traderByFx12 from "@assets/images/traderbyfx/traderbyfx-12.png";
 import traderByFx13 from "@assets/images/traderbyfx/traderbyfx-13.png";
 
+import conspiracyLogo from "@assets/images/thelastconspiracy/thelastconspiracy-logo.jpeg";
+import conspiracy1 from "@assets/images/thelastconspiracy/thelastconspiracy-1.png";
+import conspiracy2 from "@assets/images/thelastconspiracy/thelastconspiracy-2.png";
+import conspiracy3 from "@assets/images/thelastconspiracy/thelastconspiracy-3.png";
+import conspiracy4 from "@assets/images/thelastconspiracy/thelastconspiracy-4.png";
+import conspiracy6 from "@assets/images/thelastconspiracy/thelastconspiracy-6.png";
+
+import nativeLogo from "@assets/images/native/native-logo.png";
+import native1 from "@assets/images/native/native-demo-1.png";
+import native2 from "@assets/images/native/native-demo-2.png";
+import native3 from "@assets/images/native/native-demo-3.png";
+import native4 from "@assets/images/native/native-demo-4.png";
+import native5 from "@assets/images/native/native-demo-5.png";
+import native6 from "@assets/images/native/native-demo-6.png";
+import native7 from "@assets/images/native/native-demo-7.png";
+import native8 from "@assets/images/native/native-demo-8.png";
+
 import iconReact from "@assets/images/icon/icon-react.jpg";
 import iconreactHover from "@assets/images/icon/icon-react.svg";
 import iconNext from "@assets/images/icon/icon-next.jpg";
@@ -308,24 +325,39 @@ export const projects: IProject[] = [
         id: 2,
         title: "Wegonative",
         techstack: "Vuesion, Vuejs, Bootstrap",
-        image: "nativeLogo",
+        image: nativeLogo,
         category: {
             id: 2,
             slug: "shopify",
             title: "Shopify",
         },
-        projects: [],
+        projects: [
+            native1,
+            native2,
+            native3,
+            native4,
+            native5,
+            native6,
+            native7,
+            native8,
+        ],
     },
     {
         id: 3,
         title: "Wegonative Portal",
         techstack: "Vuejs, Ant Design",
-        image: "portfolio3",
+        image: conspiracyLogo,
         category: {
             id: 1,
             slug: "web-app",
             title: "Web App",
         },
-        projects: [],
+        projects: [
+            conspiracy1,
+            conspiracy2,
+            conspiracy3,
+            conspiracy4,
+            conspiracy6,
+        ],
     },
 ];

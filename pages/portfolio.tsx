@@ -1,18 +1,22 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import { Portfolio as P } from "@styles";
+import { Title } from "@components/title";
+import { PortfolioItems } from "@components/portfolioItems";
 import { projects as dummyProjects, projectCategories } from "src/common/data";
 import { IProject, IProjectCategory } from "@interfaces/IProject";
-import StackGrid, { transitions } from "react-stack-grid";
-import { Title } from "@components/title";
-import { PortfolioItems } from "@components/portfolio";
+import StackGrid, { transitions, easings } from "react-stack-grid";
+const transition = transitions.scaleDown;
 const { scaleUp } = transitions;
+import { useMediaQuery } from "react-responsive";
 
 const Portfolio: React.FC = () => {
-    const [categoryName, setCategoryName] = useState<string>("all");
     const [categories] = useState<IProjectCategory[]>(projectCategories);
+    const [selectedCategory, setSelectedCategory] = useState<string>("all");
     const [projects] = useState<IProject[]>(dummyProjects);
     const [filteredProjects, setFilteredProjects] =
         useState<IProject[]>(projects);
+    const isTablet = useMediaQuery({ query: "(max-width: 768px)" });
+    const isMobile = useMediaQuery({ query: "(max-width: 600px)" });
     const filter = (slug: string) => {
         if (slug === "all") {
             setFilteredProjects(projects);
@@ -23,26 +27,27 @@ const Portfolio: React.FC = () => {
         }
     };
     useEffect(() => {
-        filter(categoryName);
-    }, [categoryName]);
-
+        filter(selectedCategory);
+    }, [selectedCategory]);
     return (
         <P.Style>
             <Title title="Portfolio" subtitle="Portfolio" />
             {categories.length > 0 && (
                 <P.Categories>
                     <P.CategoriesItems
-                        onClick={() => setCategoryName("all")}
-                        className={categoryName === "all" ? "active" : ""}
+                        onClick={() => setSelectedCategory("all")}
+                        className={selectedCategory === "all" ? "active" : ""}
                     >
                         All
                     </P.CategoriesItems>
                     {projectCategories.map((category) => (
                         <P.CategoriesItems
-                            onClick={() => setCategoryName(category.slug)}
+                            onClick={() => setSelectedCategory(category.slug)}
                             key={category.id}
                             className={
-                                categoryName === category.slug ? "active" : ""
+                                selectedCategory === category.slug
+                                    ? "active"
+                                    : ""
                             }
                         >
                             {category.title}
@@ -51,40 +56,31 @@ const Portfolio: React.FC = () => {
                 </P.Categories>
             )}
             <StackGrid
-                columnWidth={350}
-                appear={scaleUp.appear}
-                appeared={scaleUp.appeared}
-                enter={scaleUp.enter}
-                entered={scaleUp.entered}
-                leaved={scaleUp.leaved}
+                monitorImagesLoaded
+                columnWidth={isMobile ? "100%" : isTablet ? "50%" : "30%"}
+                duration={600}
+                gutterWidth={15}
+                gutterHeight={15}
+                easing={easings.cubicOut}
+                appearDelay={60}
+                appear={transition.appear}
+                appeared={transition.appeared}
+                enter={transition.enter}
+                entered={transition.entered}
+                leaved={transition.leaved}
+                // columnWidth={isMobile ? "100%" : isTablet ? "50%" : "30%"}
+                // appear={scaleUp.appear}
+                // appeared={scaleUp.appeared}
+                // enter={scaleUp.enter}
+                // entered={scaleUp.entered}
+                // leaved={scaleUp.leaved}
             >
-                {filteredProjects.map((project, index) => {
-                    // if (categoryName === "all") {
-                    //     return (
-                    //         // <div key={index}>
-                    //         //     <h4>
-                    //         //         {project.title} - {project.category.slug}
-                    //         //     </h4>
-                    //         // </div>
-                    //         <PortfolioItems
-                    //             key={project.id}
-                    //             project={project}
-                    //         />
-                    //     );
-                    // } else if (categoryName === project.category.slug) {
-                    //     return (
-                    //         <PortfolioItems
-                    //             key={project.id}
-                    //             project={project}
-                    //         />
-                    //     );
-                    // }
-                    // console.log(project);
-
-                    <PortfolioItems key={project.id} project={project} />;
-                })}
+                {filteredProjects.map((project, index) => (
+                    <PortfolioItems key={project.id} project={project} />
+                ))}
             </StackGrid>
         </P.Style>
     );
 };
+
 export default Portfolio;

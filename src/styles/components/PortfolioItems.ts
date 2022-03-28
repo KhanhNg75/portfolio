@@ -37,20 +37,24 @@ const PortfolioContent = styled.div`
     }
 `;
 
-const Category = styled.h2`
+const Category = styled.p`
     color: var(--txt-white);
-    text-transform: uppercase;
-    font-size: 1.563rem;
     background-color: transparent;
     text-align: center;
     opacity: 0;
+    transition: all 0.4s ease-out;
+    transform: translateX(80px) translateY(0) translateZ(0) rotate(0deg)
+        scale(1);
 `;
 
-const Title = styled.p`
+const Title = styled.h2`
+    font-size: 1.563rem;
+    text-transform: uppercase;
     color: var(--txt-white);
     opacity: 0;
     transition: opacity 0.35s, transform 0.45s;
-    transform: translate3d(-20px, 0, 0);
+    transform: translateX(-70px) translateY(0) translateZ(0) rotate(0deg)
+        scale(1);
 `;
 
 const Container = styled.div`
@@ -65,7 +69,8 @@ const Container = styled.div`
         }
         ${Title} {
             opacity: 1;
-            transform: translate3d(0, 0, 0);
+            transform: translateX(0px) translateY(0) translateZ(0) rotate(0deg)
+                scale(1);
         }
         ${PortfolioContent} {
             &::before {
@@ -75,6 +80,8 @@ const Container = styled.div`
         }
         ${Category} {
             opacity: 1;
+            transform: translateX(0px) translateY(0) translateZ(0) rotate(0deg)
+                scale(1);
         }
     }
 `;

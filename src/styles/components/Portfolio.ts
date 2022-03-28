@@ -1,4 +1,7 @@
 import styled from "styled-components";
+interface IPortfolioItem {
+    active?: boolean;
+}
 
 const Style = styled.div`
     padding: 6rem 0;
@@ -13,15 +16,19 @@ const Categories = styled.div`
     margin-bottom: 30px;
 `;
 
-const CategoriesItems = styled.span`
+const CategoriesItems = styled.span<IPortfolioItem>`
     margin-right: 25px;
-    font-size: 13px;
-    color: rgb(54, 54, 54);
+    font-size: 0.9rem;
+    color: rgba(25, 29, 43, 0.55);
     cursor: pointer;
-    transition-duration: 0.3s;
-    transition-timing-function: ease;
-    transition-delay: 0s;
-    transition-property: all;
+    transition: all 0.3s ease;
+    &:hover {
+        color: #191d2b;
+        letter-spacing: 0.25rem;
+    }
+    &.active {
+        color: #191d2b;
+    }
 `;
 
 export { Style, Categories, CategoriesItems };

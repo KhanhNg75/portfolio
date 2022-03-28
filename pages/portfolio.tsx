@@ -6,7 +6,6 @@ import { projects as dummyProjects, projectCategories } from "src/common/data";
 import { IProject, IProjectCategory } from "@interfaces/IProject";
 import StackGrid, { transitions, easings } from "react-stack-grid";
 const transition = transitions.scaleDown;
-const { scaleUp } = transitions;
 import { useMediaQuery } from "react-responsive";
 
 const Portfolio: React.FC = () => {
@@ -68,12 +67,6 @@ const Portfolio: React.FC = () => {
                 enter={transition.enter}
                 entered={transition.entered}
                 leaved={transition.leaved}
-                // columnWidth={isMobile ? "100%" : isTablet ? "50%" : "30%"}
-                // appear={scaleUp.appear}
-                // appeared={scaleUp.appeared}
-                // enter={scaleUp.enter}
-                // entered={scaleUp.entered}
-                // leaved={scaleUp.leaved}
             >
                 {filteredProjects.map((project, index) => (
                     <PortfolioItems key={project.id} project={project} />

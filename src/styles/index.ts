@@ -10,3 +10,4 @@ export * as Timeline from "./components/Timeline";
 export * as ProgrammingSkills from "./components/Programming";
 export * as Typography from "./components/Typography";
 export * as Professional from "./components/Professional";
+export * as Contact from "./components/Contact";

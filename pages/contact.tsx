@@ -1,4 +1,4 @@
-import React, { useCallback, useRef } from "react";
+import React, { useRef } from "react";
 import { useForm } from "react-hook-form";
 import emailjs from "emailjs-com";
 import { Title } from "@components/title";
@@ -16,7 +16,8 @@ interface FormValues {
 }
 
 const Contact: React.FC = () => {
-    const form = useRef<HTMLInputElement | null>(null);
+    const form = useRef<HTMLFormElement>(null);
+
     const {
         register,
         handleSubmit,
@@ -24,22 +25,27 @@ const Contact: React.FC = () => {
         reset,
     } = useForm<FormValues>();
     const onSubmit = async () => {
-        emailjs
-            .sendForm(
-                "service_6g22b0z",
-                "template_vf3fm3j",
-                form.current,
-                "4ZEMv9RgXxDesQrFb",
-            )
-            .then(
-                (result) => {
-                    console.log(result.text);
-                },
-                (error) => {
-                    console.log(error.text);
-                },
-            );
-        reset();
+        if (form.current) {
+            try {
+                emailjs
+                    .sendForm(
+                        "service_6g22b0z",
+                        "template_vf3fm3j",
+                        form.current,
+                        "4ZEMv9RgXxDesQrFb",
+                    )
+                    .then(
+                        (result) => {
+                            console.log(result.text);
+                        },
+                        (error) => {
+                            console.log(error.text);
+                        },
+                    );
+            } finally {
+                reset();
+            }
+        }
     };
 
     return (

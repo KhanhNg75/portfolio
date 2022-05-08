@@ -1,6 +1,7 @@
 import { IProfessional } from "@interfaces/IProfessional";
 import { Title } from "@components/title";
 import { Professional as P } from "@styles";
+import { Wrapper as W } from "@styles";
 
 interface Props {
     title: string;
@@ -13,7 +14,7 @@ export const Professional: React.FC<Props> = ({
     professional,
 }) => {
     return (
-        <P.Style>
+        <W.Container>
             <Title title={title} subtitle={subtitle} />
             <P.ProfessionalBlock>
                 {professional.map((item) => (
@@ -22,6 +23,6 @@ export const Professional: React.FC<Props> = ({
                     </P.ProfessionalItems>
                 ))}
             </P.ProfessionalBlock>
-        </P.Style>
+        </W.Container>
     );
 };

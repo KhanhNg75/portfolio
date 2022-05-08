@@ -1,6 +1,6 @@
 import { TypedText } from "@components/typedText";
 import { Main as M } from "@styles";
-
+import { Flex } from "@styles/components/Flex";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import GitHubIcon from "@material-ui/icons/GitHub";
@@ -15,8 +15,8 @@ const socialMediaLinks = {
 
 const Home: React.FC = () => {
     return (
-        <M.Style>
-            <M.Container>
+        <Flex home alignItems="center" justifyContent="center">
+            <Flex homeContainer alignItems="center">
                 <M.Avatar>
                     <M.Image />
                 </M.Avatar>
@@ -33,7 +33,7 @@ const Home: React.FC = () => {
                         typeSpeed={30}
                         backSpeed={30}
                     />
-                    <M.SocialMedia>
+                    <Flex justifyContent="center">
                         <M.IconMedia href={socialMediaLinks.facebook}>
                             <FacebookIcon />
                         </M.IconMedia>
@@ -46,10 +46,10 @@ const Home: React.FC = () => {
                         <M.IconMedia href={socialMediaLinks.linkedin}>
                             <LinkedInIcon />
                         </M.IconMedia>
-                    </M.SocialMedia>
+                    </Flex>
                 </M.Details>
-            </M.Container>
-        </M.Style>
+            </Flex>
+        </Flex>
     );
 };
 export default Home;

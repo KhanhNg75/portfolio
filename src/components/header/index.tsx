@@ -6,6 +6,8 @@ import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
 
 import { Header as H } from "@styles";
+import { Wrapper as W } from "@styles";
+import { Flex } from "@styles/components/Flex";
 
 export const Header: React.FC = () => {
     const router = useRouter();
@@ -20,10 +22,14 @@ export const Header: React.FC = () => {
     };
 
     return (
-        <H.Container>
-            <H.Content>
+        <W.Container header>
+            <Flex
+                headerContent
+                justifyContent="space-between"
+                alignItems="center"
+            >
                 <H.Logo>Khanh Nguyen</H.Logo>
-                <H.MenuContainer>
+                <W.Container>
                     <H.MenuHamburger
                         onClick={() => {
                             toggleMenu();
@@ -67,12 +73,12 @@ export const Header: React.FC = () => {
                             </Link>
                         </H.MenuItem>
                     </H.MenuContent>
-                </H.MenuContainer>
+                </W.Container>
                 <H.Copyright>
                     © 2022 Khanh Nguyen. <br />
                     All rights reserved.
                 </H.Copyright>
-            </H.Content>
-        </H.Container>
+            </Flex>
+        </W.Container>
     );
 };

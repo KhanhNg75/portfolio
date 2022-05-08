@@ -1,8 +1,8 @@
 import { IProgrammingSkill } from "@interfaces/IProgrammingSkill";
 import { Title } from "@components/title";
 import { ProgrammingSkills as P } from "@styles";
+import { Wrapper as W } from "@styles";
 import { ICON_MAP } from "src/common/data";
-import reactHover from "@assets/images/icon/icon-react.svg";
 
 interface Props {
     title: string;
@@ -16,7 +16,7 @@ export const ProgrammingSkills: React.FC<Props> = ({
     skills,
 }) => {
     return (
-        <P.Style>
+        <W.Container>
             <Title title={title} subtitle={subtitle} />
             <P.SkillsBlock>
                 {skills.map((item) => (
@@ -35,6 +35,6 @@ export const ProgrammingSkills: React.FC<Props> = ({
                     </P.SkillsItems>
                 ))}
             </P.SkillsBlock>
-        </P.Style>
+        </W.Container>
     );
 };

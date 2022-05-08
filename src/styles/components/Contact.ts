@@ -1,17 +1,5 @@
 import styled from "styled-components";
 
-const Container = styled.div`
-    padding: 6rem 0;
-    @media only screen and (min-width: 1200px) {
-        padding: 3rem 0 1rem;
-    }
-`;
-
-const ContactInformation = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-`;
-
 const ContactItems = styled.div`
     box-shadow: 0 20px 40px rgb(0 0 0 / 20%);
     padding: 10px;
@@ -22,8 +10,6 @@ const ContactItems = styled.div`
     flex-direction: column;
     align-items: center;
 `;
-
-const ContactIcon = styled.div``;
 
 const ContactTitle = styled.h2`
     text-transform: uppercase;
@@ -63,10 +49,7 @@ const InputGroup = styled.div`
 const SubmmitBtn = styled.button``;
 
 export {
-    Container,
-    ContactInformation,
     ContactItems,
-    ContactIcon,
     ContactTitle,
     ContactContent,
     ContactForm,

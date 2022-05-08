@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { Portfolio as P } from "@styles";
+import { Wrapper as W } from "@styles";
+import { Flex } from "@styles/components/Flex";
 import { Title } from "@components/title";
 import { PortfolioItems } from "@components/portfolioItems";
 import { projects as dummyProjects, projectCategories } from "src/common/data";
@@ -29,10 +31,10 @@ const Portfolio: React.FC = () => {
         filter(selectedCategory);
     }, [selectedCategory]);
     return (
-        <P.Style>
+        <W.Container padding>
             <Title title="Portfolio" subtitle="Portfolio" />
             {categories.length > 0 && (
-                <P.Categories>
+                <Flex flexWrap="wrap" mb={30}>
                     <P.CategoriesItems
                         onClick={() => setSelectedCategory("all")}
                         className={selectedCategory === "all" ? "active" : ""}
@@ -52,7 +54,7 @@ const Portfolio: React.FC = () => {
                             {category.title}
                         </P.CategoriesItems>
                     ))}
-                </P.Categories>
+                </Flex>
             )}
             <StackGrid
                 monitorImagesLoaded
@@ -72,7 +74,7 @@ const Portfolio: React.FC = () => {
                     <PortfolioItems key={project.id} project={project} />
                 ))}
             </StackGrid>
-        </P.Style>
+        </W.Container>
     );
 };
 

@@ -4,47 +4,12 @@ interface IMenuItem {
     active?: boolean;
 }
 
-const Container = styled.div`
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    background: var(--bg-white);
-    @media only screen and (min-width: 1200px) {
-        width: 350px;
-        height: 100vh;
-        top: inherit;
-        display: flex;
-        align-items: center;
-    }
-`;
-
-const Content = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 0 0.9rem 0 1.25rem;
-    @media only screen and (min-width: 1200px) {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 0 3.15rem;
-    }
-`;
-
 const Logo = styled.h1`
     font-size: 1.5rem;
     color: var(--txt-black);
     @media only screen and (min-width: 1200px) {
         font-size: 1.85rem;
     }
-`;
-
-const MenuContainer = styled.div`
-    /* padding: 0;
-    @media only screen and (min-width: 1200px) {
-        padding: 2.5rem 0 3rem;
-    } */
 `;
 
 const MenuHamburger = styled.div`
@@ -61,7 +26,7 @@ const MenuHamburger = styled.div`
 
 const MenuContent = styled.ul<IMenuItem>`
     position: fixed;
-    top: 50px;
+    top: 48px;
     right: -200px;
     height: 100vh;
     width: 200px;
@@ -114,13 +79,4 @@ const Copyright = styled.div`
     }
 `;
 
-export {
-    Container,
-    Content,
-    Logo,
-    MenuContainer,
-    MenuHamburger,
-    MenuContent,
-    MenuItem,
-    Copyright,
-};
+export { Logo, MenuHamburger, MenuContent, MenuItem, Copyright };

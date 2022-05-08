@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-const Style = styled.div``;
-
 const SkillsBlock = styled.div`
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
@@ -38,4 +36,4 @@ const SkillsTitle = styled.span`
     color: var(--txt-black);
 `;
 
-export { Style, SkillsBlock, SkillsItems, SkillsImg, SkillsTitle };
+export { SkillsBlock, SkillsItems, SkillsImg, SkillsTitle };

@@ -1,5 +1,6 @@
 import Typed from "react-typed";
 import { TypedText as T } from "@styles";
+import { Wrapper as W } from "@styles";
 
 interface Props {
     strings: string[];
@@ -17,7 +18,7 @@ export const TypedText: React.FC<Props> = ({
     showCursor,
 }) => {
     return (
-        <T.Style>
+        <T.Container>
             <Typed
                 className="typed-text"
                 loop={loop}
@@ -26,6 +27,6 @@ export const TypedText: React.FC<Props> = ({
                 backSpeed={backSpeed}
                 showCursor={showCursor}
             />
-        </T.Style>
+        </T.Container>
     );
 };

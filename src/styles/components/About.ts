@@ -1,14 +1,10 @@
 import styled from "styled-components";
 
-const Style = styled.div``;
-
 const Content = styled.div`
     @media only screen and (min-width: 1200px) {
         display: flex;
     }
 `;
-
-const Image = styled.div``;
 
 const ProfileImage = styled.img`
     height: 230px;
@@ -41,10 +37,6 @@ const Infor = styled.div`
     }
 `;
 
-const InforItem = styled.div`
-    display: flex;
-`;
-
 const InforLeft = styled.p`
     min-width: 7.5rem;
     display: inline-block;
@@ -56,14 +48,11 @@ const InforLeft = styled.p`
 const InforRight = styled.p``;
 
 export {
-    Style,
     Content,
-    Image,
     ProfileImage,
     Description,
     Intro,
     Infor,
-    InforItem,
     InforLeft,
     InforRight,
 };

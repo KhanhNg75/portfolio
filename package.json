@@ -19,6 +19,7 @@
         "@mui/material": "^5.4.3",
         "@mui/styled-engine-sc": "^5.4.2",
         "@types/react-stack-grid": "^0.7.3",
+        "@types/styled-system": "^5.1.15",
         "emailjs-com": "^3.2.0",
         "next": "10.2.0",
         "next-compose-plugins": "^2.2.1",

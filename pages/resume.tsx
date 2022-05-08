@@ -9,12 +9,12 @@ import {
     softwares,
     professional,
 } from "src/common/data";
-import { Resume as R } from "@styles";
+import { Wrapper as W } from "@styles";
 import { Professional } from "@components/professional";
 
 const Resume: React.FC = () => {
     return (
-        <R.Style>
+        <W.Container padding>
             <About title="About Me" subtitle="About Me" info={aboutMe} />
             <Timeline
                 title="My Experience"
@@ -41,7 +41,7 @@ const Resume: React.FC = () => {
                 subtitle="Professional Skills"
                 professional={professional}
             />
-        </R.Style>
+        </W.Container>
     );
 };
 export default Resume;

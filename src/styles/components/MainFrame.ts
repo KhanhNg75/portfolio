@@ -1,16 +1,5 @@
 import styled from "styled-components";
 
-const Container = styled.div`
-    width: 100%;
-    min-height: 100vh;
-    /* background-color: var(--bg-primary); */
-    background-color: var(--bg-newp-primary);
-    border-left: none;
-    @media only screen and (min-width: 1200px) {
-        padding-left: 350px;
-    }
-`;
-
 const Content = styled.div`
     width: 100%;
     border-left: none;
@@ -36,4 +25,4 @@ const SectionContainer = styled.div`
     margin: 0 auto;
 `;
 
-export { Container, Content, Section, SectionContainer };
+export { Content, Section, SectionContainer };

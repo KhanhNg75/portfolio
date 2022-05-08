@@ -1,4 +1,6 @@
 import { About as A } from "@styles";
+import { Wrapper as W } from "@styles";
+import { Flex } from "@styles/components/Flex";
 import { Title } from "@components/title";
 import { IAboutMe } from "@interfaces/IAboutMe";
 import profilePhoto from "@assets/images/profile.jpg";
@@ -12,43 +14,43 @@ interface Props {
 
 export const About: React.FC<Props> = ({ title, subtitle, info }) => {
     return (
-        <A.Style>
+        <W.Container>
             <Title title={title} subtitle={subtitle} />
             <A.Content>
-                <A.Image>
+                <W.Container>
                     <A.ProfileImage src={profilePhoto} alt="profile photo" />
-                </A.Image>
+                </W.Container>
                 <A.Description>
                     <A.Intro>{info.intro}</A.Intro>
                     <A.Infor>
-                        <A.InforItem>
+                        <Flex>
                             <A.InforLeft>Age:</A.InforLeft>
                             <A.InforRight>{info.age}</A.InforRight>
-                        </A.InforItem>
-                        <A.InforItem>
+                        </Flex>
+                        <Flex>
                             <A.InforLeft>Job:</A.InforLeft>
                             <A.InforRight>{info.job}</A.InforRight>
-                        </A.InforItem>
-                        <A.InforItem>
+                        </Flex>
+                        <Flex>
                             <A.InforLeft>Citizenship:</A.InforLeft>
                             <A.InforRight>{info.citizenship}</A.InforRight>
-                        </A.InforItem>
-                        <A.InforItem>
+                        </Flex>
+                        <Flex>
                             <A.InforLeft>Residence:</A.InforLeft>
                             <A.InforRight>{info.residence}</A.InforRight>
-                        </A.InforItem>
-                        <A.InforItem>
+                        </Flex>
+                        <Flex>
                             <A.InforLeft>Email:</A.InforLeft>
                             <A.InforRight>{info.email}</A.InforRight>
-                        </A.InforItem>
-                        <A.InforItem>
+                        </Flex>
+                        <Flex>
                             <A.InforLeft>Phone:</A.InforLeft>
                             <A.InforRight>{info.phone}</A.InforRight>
-                        </A.InforItem>
+                        </Flex>
                     </A.Infor>
                     <Button variant="outlined">Download CV</Button>
                 </A.Description>
             </A.Content>
-        </A.Style>
+        </W.Container>
     );
 };

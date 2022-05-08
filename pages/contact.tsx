@@ -1,8 +1,11 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import emailjs from "emailjs-com";
 import { Title } from "@components/title";
 import { Contact as C } from "@styles";
+import { Wrapper as W } from "@styles";
+import { Flex } from "@styles/components/Flex";
+
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
 import Button from "@mui/material/Button";
@@ -17,6 +20,7 @@ interface FormValues {
 
 const Contact: React.FC = () => {
     const form = useRef<HTMLFormElement>(null);
+    const [result, setshowResult] = useState(false);
 
     const {
         register,
@@ -44,29 +48,35 @@ const Contact: React.FC = () => {
                     );
             } finally {
                 reset();
+                setshowResult(true);
             }
         }
     };
 
+    // hide result
+    setTimeout(() => {
+        setshowResult(false);
+    }, 8000);
+
     return (
-        <C.Container>
+        <W.Container padding>
             <Title title="Contact" subtitle="Contact" />
-            <C.ContactInformation>
+            <Flex flexWrap="wrap">
                 <C.ContactItems>
-                    <C.ContactIcon>
+                    <W.GlobalContainer>
                         <PhoneIcon />
-                    </C.ContactIcon>
+                    </W.GlobalContainer>
                     <C.ContactTitle>Phone</C.ContactTitle>
                     <C.ContactContent>{aboutMe.phone}</C.ContactContent>
                 </C.ContactItems>
                 <C.ContactItems>
-                    <C.ContactIcon>
+                    <W.GlobalContainer>
                         <EmailIcon />
-                    </C.ContactIcon>
+                    </W.GlobalContainer>
                     <C.ContactTitle>Email</C.ContactTitle>
                     <C.ContactContent>{aboutMe.email}</C.ContactContent>
                 </C.ContactItems>
-            </C.ContactInformation>
+            </Flex>
             <C.ContactForm>
                 <form ref={form} onSubmit={handleSubmit(onSubmit)}>
                     <C.InputGroup>
@@ -123,9 +133,10 @@ const Contact: React.FC = () => {
                     <Button variant="contained" type="submit">
                         Send Message
                     </Button>
+                    <p>{result ? "Message Sent" : null}</p>
                 </form>
             </C.ContactForm>
-        </C.Container>
+        </W.Container>
     );
 };
 export default Contact;

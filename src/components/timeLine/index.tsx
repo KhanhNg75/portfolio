@@ -14,7 +14,7 @@ export const Timeline: React.FC<Props> = ({
     timelineItems,
 }) => {
     return (
-        <T.Style>
+        <T.Container>
             <Title title={title} subtitle={subtitle} />
             {timelineItems.map((item) => (
                 <T.SectionBlock key={item.id}>
@@ -28,6 +28,6 @@ export const Timeline: React.FC<Props> = ({
                     </T.BlockRight>
                 </T.SectionBlock>
             ))}
-        </T.Style>
+        </T.Container>
     );
 };

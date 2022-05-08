@@ -1,23 +1,6 @@
 import styled from "styled-components";
 import profilePhoto from "@assets/images/profile.jpg";
 
-const Style = styled.div`
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-`;
-
-const Container = styled.div`
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    @media only screen and (min-width: 1024px) {
-        flex-direction: row;
-    }
-`;
-
 const Avatar = styled.div`
     position: relative;
     border-radius: 100%;
@@ -63,11 +46,6 @@ const Name = styled.h3`
     }
 `;
 
-const SocialMedia = styled.div`
-    display: flex;
-    justify-content: center;
-`;
-
 const IconMedia = styled.a`
     display: inline-block;
     margin-right: 0.5rem;
@@ -76,13 +54,4 @@ const IconMedia = styled.a`
     }
 `;
 
-export {
-    Style,
-    Container,
-    Avatar,
-    Image,
-    Details,
-    Name,
-    SocialMedia,
-    IconMedia,
-};
+export { Avatar, Image, Details, Name, IconMedia };

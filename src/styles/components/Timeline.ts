@@ -8,7 +8,7 @@ const SectionBlock = styled.div`
     }
 `;
 
-const Style = styled.div`
+const Container = styled.div`
     padding-bottom: 20px;
     ${SectionBlock} {
         &:last-child {
@@ -81,7 +81,7 @@ const Description = styled.p`
 `;
 
 export {
-    Style,
+    Container,
     SectionBlock,
     Title,
     Description,

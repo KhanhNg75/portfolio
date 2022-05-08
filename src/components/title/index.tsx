@@ -1,4 +1,5 @@
 import { Typography as T } from "@styles";
+import { Wrapper as W } from "@styles";
 
 interface Props {
     title: string;
@@ -7,10 +8,10 @@ interface Props {
 
 export const Title: React.FC<Props> = ({ title, subtitle }) => {
     return (
-        <T.Style>
+        <W.Container titleContainer>
             <T.Title>
                 {title} <T.SubTitle>{subtitle}</T.SubTitle>
             </T.Title>
-        </T.Style>
+        </W.Container>
     );
 };

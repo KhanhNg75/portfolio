@@ -5,7 +5,6 @@ import { Title } from "@components/title";
 import { IAboutMe } from "@interfaces/IAboutMe";
 import profilePhoto from "@assets/images/profile.jpg";
 import Button from "@mui/material/Button";
-
 interface Props {
     title: string;
     subtitle: string;
@@ -48,7 +47,11 @@ export const About: React.FC<Props> = ({ title, subtitle, info }) => {
                             <A.InforRight>{info.phone}</A.InforRight>
                         </Flex>
                     </A.Infor>
-                    <Button variant="outlined">Download CV</Button>
+                    <Button variant="outlined">
+                        <a href="@assets/resume/CV.pdf" download>
+                            Download CV
+                        </a>
+                    </Button>
                 </A.Description>
             </A.Content>
         </W.Container>

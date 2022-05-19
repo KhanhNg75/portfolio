@@ -47,11 +47,11 @@ export const About: React.FC<Props> = ({ title, subtitle, info }) => {
                             <A.InforRight>{info.phone}</A.InforRight>
                         </Flex>
                     </A.Infor>
-                    <Button variant="outlined">
-                        <a href="@assets/resume/CV.pdf" download>
+                    {/* <Button variant="outlined">
+                        <a href="../../assets/resume/CV.pdf" download>
                             Download CV
                         </a>
-                    </Button>
+                    </Button> */}
                 </A.Description>
             </A.Content>
         </W.Container>
